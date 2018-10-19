@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import {UserPage} from "../user/user";
+import {SettingsPage} from "../settings/settings";
 
 @Component({
   selector: 'page-home',
@@ -14,6 +15,10 @@ export class HomePage {
 
   showUsers(){
     this.navCtrl.push(UserPage);
+  }
+
+  showSettings(){
+    this.navCtrl.push(SettingsPage);
   }
 
 }
