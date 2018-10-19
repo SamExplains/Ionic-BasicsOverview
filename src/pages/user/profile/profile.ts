@@ -1,9 +1,17 @@
-import {Component} from "@angular/core";
+import { Component, OnInit } from "@angular/core";
+import { NavParams } from "ionic-angular";
 
 @Component({
   selector: 'page-profile',
-  template: 'profile.html'
+  templateUrl: 'profile.html'
 })
-export class ProfilePage {
+export class ProfilePage implements OnInit{
   name: string;
+
+  constructor(private navParams: NavParams) {}
+
+  ngOnInit(){
+    this.name = this.navParams.get('userName');
+  }
+
 }
