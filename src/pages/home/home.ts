@@ -9,13 +9,12 @@ import {SettingsPage} from "../settings/settings";
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
-
-  }
-
-  showUsers(){
-    this.navCtrl.push(UserPage);
-  }
+  userPage = UserPage;
+  constructor(public navCtrl: NavController) {}
+  //
+  // showUsers(){
+  //   this.navCtrl.push(UserPage);
+  // }
 
   showSettings(){
     this.navCtrl.push(SettingsPage);
